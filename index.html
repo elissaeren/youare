@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" crussontent="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+English" rel="stylesheet">
+    
+	<title>you are an audience</title>
+	
+	<!-- 
+	***** START CSS ***** 
+	-->
+	<style>
+
+		/* You can change the colors, font, and so on below */
+
+		body {
+			background: #000000;
+			margin-left: 30%;
+            
+            color: #ffffff;
+            font-family: 'IM Fell English', serif;
+			font-size: 18px;
+            line-height: 26px;
+			letter-spacing: 4.5px;
+			text-transform: uppercase;
+		}
+
+		.list-one {
+
+		}
+
+		.list-two {
+		}
+
+		.list-three {
+		}
+
+		.list-four {
+		}
+
+		p {
+			margin-bottom: 2em;
+		}
+        
+        /* Media Queries */
+
+        @media screen and (max-width: 1024px) {
+            body {
+                font-size: 18px;
+                line-height: 26px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 18px;
+                line-height: 26px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            body {
+                font-size: 15px;
+                line-height: 23px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            body {
+                margin-left: 20%;
+                
+                font-size: 15px;
+                line-height: 20px;
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+            body {
+                margin-left: 10%;
+                
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+
+	</style>
+	<!-- 
+	***** END CSS ***** 
+	-->
+
+
+	<!-- 
+	***** START JAVASCRIPT ***** 
+	-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			// list one content
+			var one = [
+				"you are the audience",
+                "you are the fingerguns emoji",
+                "you are a small and fluttering thing",
+                "you are a stop sign",
+                "you are a fizzy drink",
+                "you are a rubberband",
+                "you are an activist",
+                "you are the future",
+                "you are a quarter from the sidewalk",
+                "you are the woman in the wallpaper",
+                "you are the box Pandora held in her hands",
+                "you are the whisper in the wind",
+                "you are a candle",
+                "you are a worn leather jacket",
+                "you are an SNL skit",
+                "you are a story",
+                "you are an abyss",
+                "you are a bruise",
+                "you are a painting hanging in a gallery",
+                "you are nonexistant",
+                "you are a missed phone call",
+                "you are a glittery sticker",
+                "you are faceless",
+                "you are spirited and hungry",
+                "you are an individual",
+                "you are spite incarnate",
+                "you are a script of missed opportunities",
+                "you are one-liners that fell flat",
+                "you are a replacement",
+                "you are mine",
+                "you are a joke",
+                "you are searching for meaning",
+                "you are running",
+                "you are out of time",
+                "you are not the protagonist",
+                "you are worth listening to"
+			];
+
+			// list two content
+			var two = [
+				"surrounded on all sides",
+                "covered in red",
+                "standing on your own two feet",
+                "struggling and triumphant",
+                "overlayed with the fourth dimension",
+                "reminiscent of last night's taco bell trip",
+                "flickering with light",
+                "grieving",
+                "watching tv static",
+                "hopeless and lost",
+                "starving for truth",
+                "going on a sober rant about stamps",
+                "firm and unbending",
+                "resolute in your wrath",
+                "quotable and charismatic",
+                "imaginative and tired",
+                "avoiding sleep",
+                "constantly moving",
+                "covered in sand",
+                "going on a drunk rant about stamps",
+                "hunting for thunder",
+                "questing after the perfect pick-up line",
+                "full of puns",
+                "pushing forward"
+			];
+
+			// list three content
+			var three = [
+				"happily imagining your future",
+                "dissasociating from your present reality",
+                "reading your palm lines to determine how you die",
+                "containing hope",
+                "fluttering and whispering into the night",
+                "telling jokes about your trauma",
+                "storytelling deep into the night",
+                "making a 4 a.m. phone call to the whispering death",
+                "monologuing to an empty theater",
+                "writing a new Twitter status, drunk and bitter",
+                "complaining loudly to anyone who will listen",
+                "reading last year's horoscopes",
+                "crafting a new ending",
+                "choosing a new adventure",
+                "turning the page"
+			];
+
+			// list four content
+			var four = [
+				"and softening your sharp edges",
+                "and re-examining past mistakes",
+                "and in search of meaning",
+                "and continuing to exist",
+                "and pushing forward",
+                "and smiling",
+                "and fiery in your wrath",
+                "and ceasing to be a part of society",
+                "and constantly in motion",
+                "and avoiding saying goodbye",
+                "and endless",
+                "and trapped",
+                "and existing in a haze, remembering possibilities",
+                "and humming softly to yourself"
+			];
+
+			// This is a very common randomizing function.
+			// It takes a list (array) and returns one at random.
+			function select_random(x){
+				y = x[Math.floor(Math.random()*x.length)];
+				return y;
+			}
+
+			// This is the generator function
+			function generate(){
+
+				// Select a random item from each list
+				var selected_one = select_random(one);
+				var selected_two = select_random(two);
+				var selected_three = select_random(three);
+				var selected_four = select_random(four);
+
+				// Make a paragraph and then add the selected (random) item from each list list
+				$('body').append('<p>');
+				$('body').append('<div class="list-one">' + selected_one + '</div>');
+				$('body').append('<div class="list-two">' + selected_two + '</div>');
+				$('body').append('<div class="list-three">' + selected_three + '</div>');
+				$('body').append('<div class="list-four">' + selected_four + '</div>');
+				$('body').append('</p>');
+
+			}
+
+			// Run the generator every two seconds ("2000" in the code below)
+			function timeout() {
+			    setTimeout(function () {
+			        generate();
+			        timeout();
+			    }, 2000);
+			}
+
+			generate();
+
+			timeout();
+			
+		});
+
+	</script>
+	<!-- 
+	***** END JAVASCRIPT ***** 
+	-->
+
+</head>
+
+<body>
+
+	<!--
+	This is the visible portion.
+
+	If you want your words or phrases to go side-by-side, change...
+
+	<div></div>
+	to
+	<span></span>
+
+	in the code below.
+	-->
+
+</body>
+
+</html>
