@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" crussontent="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+English" rel="stylesheet">
+    
+	<title>why aren't you likable?</title>
+	
+	<!-- 
+	***** START CSS ***** 
+	-->
+	<style>
+
+		/* You can change the colors, font, and so on below */
+
+		body {
+			background: #ffffff;
+			margin-left: 30%;
+            margin-right: 3%;
+            
+            color: #000000;
+            font-family: 'IM Fell English', serif;
+			font-size: 18px;
+            line-height: 26px;
+			letter-spacing: 4px;
+			text-transform: uppercase;
+		}
+        
+        .why {
+            margin-top: 10%;
+            font-style: italic;
+            font-size: 24px;
+            line-height: 26px;
+        }
+
+		.list-one {
+
+		}
+
+		.list-two {
+		}
+
+		.list-three {
+		}
+
+		.list-four {
+		}
+
+		p {
+			margin-bottom: 3.5em;
+		}
+        
+        /* Media Queries */
+
+        @media screen and (max-width: 1024px) {
+            body {
+                font-size: 18px;
+                line-height: 26px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 18px;
+                line-height: 26px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            body {
+                margin-left: 20%;
+                
+                font-size: 15px;
+                line-height: 23px;
+                letter-spacing: 3px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            body {
+                margin-left: 20%;
+                
+                font-size: 15px;
+                line-height: 20px;
+                letter-spacing: 2px;
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+            body {
+                margin-left: 10%;
+                
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 2px;
+            }
+        }
+
+	</style>
+	<!-- 
+	***** END CSS ***** 
+	-->
+
+
+	<!-- 
+	***** START JAVASCRIPT ***** 
+	-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			// list one content
+			var one = [
+				"is it because you are the audience?",
+                "is it because you are a stop sign?",
+                "is it because you are an activist?",
+                "is it because you are the future?",
+                "is it because you are the woman in the wallpaper?",
+                "is it because you are the box Pandora held in her hands?",
+                "is it because you are the whisper in the wind?",
+                "is it because you are a worn leather jacket?",
+                "is it because you are an SNL skit?",
+                "is it because you are a story?",
+                "is it because you are an abyss?",
+                "is it because you are a bruise?",
+                "is it because you are nonexistant?",
+                "is it because you are a missed phone call?",
+                "is it because you are faceless?",
+                "is it because you are spirited and hungry?",
+                "is it because you are an individual?",
+                "is it because you are spite incarnate?",
+                "is it because you are a script of missed opportunities?",
+                "is it because you are one-liners that fell flat?",
+                "is it because you are a replacement?",
+                "is it because you are mine?",
+                "is it because you are a joke?",
+                "is it because you are searching for meaning?",
+                "is it because you are running?",
+                "is it because you are out of time?",
+                "is it because you are not the protagonist?",
+                "is it because you are worth listening to?",
+                "is it because you are the villain?",
+                "is it because you are vague and insubstantial?",
+                "is it because you are forgotten?",
+                "is it because you are a semi-colon, always used incorrectly?",
+                "is it because you are confused?",
+                "is it because you are damned?",
+                "is it because you are fragmented?",
+                "is it because you are without prospect?",
+                "is it because you are an approximation?",
+                "is it because you are waiting, always waiting?",
+                "is it because you are voiceless?",
+                "is it because you are tired?",
+                "is it because you are exhausted?",
+                "is it because you don't know who you are?",
+                "is it because you don't know who to be today?",
+                "is it because you are left on read?",
+                "is it because you are amazing and amazed?",
+                "is it because you must escape?",
+                "is it because you are whoever you must be?",
+                "is it because you are a question?",
+                "is it because you are honey-sweet and devastating?",
+                "is it because you are a performer?",
+                "is it because you are a rainy day?",
+                "is it because you are a word that doesn't exist yet?",
+                "is it because you are never content?",
+                "is it because you are jittery and bored?",
+                "is it because you are a sound voiced to an empty room?",
+                "is it because you are silent?",
+                "is it because you are stagnant?"
+			];
+
+			// list two content
+			var two = [
+				"you, who",
+                "you, who decided to stand back up and continue on.",
+                "you, who spit on everyone else's ideals and made your own way out.",
+                "you, the one that",
+                "you, the one that created your own family.",
+                "you, the one that split time apart just to find your own path."
+			];
+
+			// This is a very common randomizing function.
+			// It takes a list (array) and returns one at random.
+			function select_random(x){
+				y = x[Math.floor(Math.random()*x.length)];
+				return y;
+			}
+
+			// This is the generator function
+			function generate(){
+
+				// Select a random item from each list
+				var selected_one = select_random(one);
+				var selected_two = select_random(two);
+
+				// Make a paragraph and then add the selected (random) item from each list list
+				$('body').append('<p>');
+				$('body').append('<div class="list-one">' + selected_one + '</div>');
+				$('body').append('<div class="list-two">' + selected_two + '</div>');
+				$('body').append('</p>');
+
+			}
+
+			// Run the generator every two seconds ("2000" in the code below)
+			function timeout() {
+			    setTimeout(function () {
+			        generate();
+			        timeout();
+			    }, 2000);
+			}
+
+			generate();
+
+			timeout();
+			
+		});
+
+	</script>
+	<!-- 
+	***** END JAVASCRIPT ***** 
+	-->
+
+</head>
+
+<body>
+    
+    <div class="why">why aren't you likable?</div>
+
+	<!--
+	This is the visible portion.
+
+	If you want your words or phrases to go side-by-side, change...
+
+	<div></div>
+	to
+	<span></span>
+
+	in the code below.
+	-->
+
+</body>
+
+</html>
