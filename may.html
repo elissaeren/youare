@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" crussontent="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+English" rel="stylesheet">
+    
+	<title></title>
+	
+	<!-- 
+	***** START CSS ***** 
+	-->
+	<style>
+
+		body { 
+            /* Input any CSS changes you want to make here */
+			text-transform: uppercase;
+		}
+
+		.list-one {}
+
+		.list-two {}
+
+		.list-three {}
+
+		.list-four {}
+
+		p {}
+        
+        /* Media Queries */
+        /* Responsive */
+
+        @media screen and (max-width: 1024px) {
+            body {}
+        }
+
+        @media screen and (max-width: 768px) {
+            body {}
+        }
+
+        @media screen and (max-width: 600px) {
+            body {}
+        }
+
+        @media screen and (max-width: 480px) {
+            body {}
+        }
+
+        @media screen and (max-width: 320px) {
+            body {}
+        }
+
+	</style>
+	<!-- 
+	***** END CSS ***** 
+	-->
+
+
+	<!-- 
+	***** START JAVASCRIPT ***** 
+	-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+            
+            /* So I'd recommend adding more variables to var one and var four for sure, 
+            right now you'll get a lot of repetition even though it lookd like you have a lot of var one options 
+            that first variable is the one people hook into the most so repeats are way more noticeable 
+            - the same goes for endings */
+            
+            // list one content
+			var one = [
+				"you were close",
+                "you don't understand",
+                "you are odysseus, returning home unremembered",
+                "you sit in the back row of your own church",
+                "you're sitting in a cafe at 2 a.m.",
+                "you smile but don't mean it",
+                "you used to remember",
+                "you are a worn pair of converse",
+                "you are an olive in an empty martini glass",
+                "you are shaken, not stirred",
+                "you are a pair of shiny red boots",
+                "you look like you ride a vespa",
+                "you try, mostly",
+                "you are your own baggage",
+                "you are five",
+                "you are a bookstore late at night",
+                "you are home",
+                "you are salt, not sugar",
+                "you are disappointing",
+                "you are an ironic polaroid",
+                "you are intent in the steps you take",
+                "you wander, softly through the night",
+                "you are the beast",
+                "you used to tell stories",
+                "you are known",
+                "you aren't like them",
+                "you are blatant",
+                "you are travel-sized",
+                "you are a mismatched pair of socks",
+                "you are a habberdashery",
+                "you are 7 impossible things before breakfast",
+                "you are a good thing, poorly timed",
+                "you stumble",
+                "you arrive late when it matters",
+                "you have buttons for eyes and a family when it matters",
+                "you have a seashell where your heart should be and the tide instead of pumping blood",
+                "you are a replacement for a heart",
+                "you didn't go back",
+                "you are built to last",
+                "you are a quiet place on a saturday night",
+                "you are a quiet place on a sunday morning",
+                "you are reliving the past"
+			];
+
+			// list two content
+			var two = [
+				"sticking to your independence willfully",
+                "working for others",
+                "struggling to finish a cake",
+                "grabbing what you can",
+                "getting lost in parallels",
+                "thinking an overwhelming amount",
+                "trying to make your mind work unsuccessfully",
+                "clinging to bands that broke up in the 90s",
+                "losing your train of thought",
+                "sailing away",
+                "dismissing your own worries",
+                "saving the worst for later",
+                "making it up as you go",
+                "creating a faceless corporation to serve",
+                "heelying without a care",
+                "staring at the root of your insecurity",
+                "refraining from sharing what's on your mind",
+                "burdening those you love",
+                "filling the last page of your journal",
+                "writing in perpetuity",
+                "sinking into your surroundings",
+                "picking up the pen",
+                "handing off the responsibility",
+                "driving into the sunrise",
+                "telling them to shut up",
+                "smiling at your mistakes",
+                "pointing out the obvious",
+                "listening to your surroundings",
+                "building yourself a home",
+                "recycling for your own betterment",
+                "suffering",
+                "drawing faces in fogging mirrors",
+                "waiting for the bass to drop",
+                "falling asleep on a roadtrip",
+                "disbelieving the truth in front of you",
+                "documenting your life in a futile effort to recapture who you once were"
+			];
+
+			// list three content
+			var three = [
+				"escaping what you can't live without",
+                "making sense only when you have to",
+                "and fading away",
+                "preventing imagined calamities",
+                "pretending to give a shit",
+                "pointing out your own flaws",
+                "singleminded",
+                "and keeping three photos on your phone",
+                "admitting that self-awareness doesn't excuse a lack of respect",
+                "lowering your expectations"
+			];
+
+			// list four content
+			var four = [
+				"and smiling regardless",
+                "and restarting the cycle",
+                "and without prospect of a true end",
+                "and collaborating without expectation",
+                "and every now and then, it works",
+                "and it would have worked too, if it wasn't for those meddlesome kids",
+                "and still figuring out the details",
+                "and quiet",
+                "and biting off the ends of sentences",
+                "and implying that authenticity is any kinder than lying to yourself",
+                "and anticipating a blow",
+                "and leaving",
+                "and being abandoned",
+                "and willfully redirecting using mindless half-truths",
+                "and aimless",
+                "and the words come",
+                "and advertising past mistakes",
+                "and misconstruing your own meaning",
+                "and using empty threats",
+                "and lashing out, hollow",
+                "and limiting your possibilities",
+                "and remembering the words but forgetting the song"
+			];
+
+			// This is a very common randomizing function.
+			// It takes a list (array) and returns one at random.
+			function select_random(x){
+				y = x[Math.floor(Math.random()*x.length)];
+				return y;
+			}
+
+			// This is the generator function
+			function generate(){
+
+				// Select a random item from each list
+				var selected_one = select_random(one);
+				var selected_two = select_random(two);
+				var selected_three = select_random(three);
+				var selected_four = select_random(four);
+
+				// Make a paragraph and then add the selected (random) item from each list list
+				$('body').append('<p>');
+				$('body').append('<div class="list-one">' + selected_one + '</div>');
+				$('body').append('<div class="list-two">' + selected_two + '</div>');
+				$('body').append('<div class="list-three">' + selected_three + '</div>');
+				$('body').append('<div class="list-four">' + selected_four + '</div>');
+				$('body').append('</p>');
+
+			}
+
+			// Run the generator every two seconds ("2000" in the code below)
+			function timeout() {
+			    setTimeout(function () {
+			        generate();
+			        timeout();
+			    }, 2000);
+			}
+
+			generate();
+
+			timeout();
+			
+		});
+
+	</script>
+	<!-- 
+	***** END JAVASCRIPT ***** 
+	-->
+
+</head>
+
+<body>
+
+	<!--
+	This is the visible portion.
+
+	If you want your words or phrases to go side-by-side, change...
+
+	<div></div>
+	to
+	<span></span>
+
+	in the code below.
+	-->
+
+</body>
+
+</html>
