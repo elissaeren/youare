@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" crussontent="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+English" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+    
+	<title></title>
+	
+	<!-- 
+	***** START CSS ***** 
+	-->
+	<style>
+
+		body { 
+            background: #ffffff;
+			margin-left: 25%;
+            margin-right: 20%;
+            margin-top: 8%;
+            
+            color: #000000;
+            font-family: 'Julius Sans One', sans-serif;
+            font-weight: 400;
+			font-size: 18px;
+            line-height: 26px;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+		}
+
+		.list-one {}
+
+		.list-two {}
+
+		.list-three {}
+
+		.list-four {}
+
+		p {
+            margin-bottom: 3em;
+        }
+        
+        /* Media Queries */
+        /* Responsive */
+
+        @media screen and (max-width: 1024px) {
+            body {}
+        }
+
+        @media screen and (max-width: 768px) {
+            body {}
+        }
+
+        @media screen and (max-width: 600px) {
+            body {}
+        }
+
+        @media screen and (max-width: 480px) {
+            body {}
+        }
+
+        @media screen and (max-width: 320px) {
+            body {}
+        }
+
+	</style>
+	<!-- 
+	***** END CSS ***** 
+	-->
+
+
+	<!-- 
+	***** START JAVASCRIPT ***** 
+	-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+            
+            /* So I'd recommend adding more variables to var one and var four for sure, 
+            right now you'll get a lot of repetition even though it lookd like you have a lot of var one options 
+            that first variable is the one people hook into the most so repeats are way more noticeable 
+            - the same goes for endings */
+            
+            // list one content
+			var one = [
+				"you are a soft and small thing",
+                "you are not strong enough for this right now",
+                "you are that dragon",
+                "you are crying alone for no identifiable reason other than you need to",
+                "you can't remember the last time you cried, before this",
+                "your pain has metastasized, as has your grief",
+                "you are sleep-deprived",
+                "you are without energy",
+                "you are quiet in your current state",
+                "you are slow to react",
+                "you are present, as if that could ever be enough",
+                "you are disappointed in your own decisions",
+                "you are unable to control the tremble in your hands, that constant haunting shake",
+                "you are willing to change",
+                "you are trying to commit conversations to memory",
+                "you are losing time",
+                "you are painfully aware of your mistakes"
+			];
+
+			// list two content
+			var two = [
+				"running into new obstacles",
+                "watching the tremor in your veins"
+			];
+
+			// list three content
+			var three = [
+				"",
+                ""
+			];
+
+			// list four content
+			var four = [
+				"and examining the blinking lights on the clock",
+                "and trying not to react",
+                "and isolating yourself so you don't become a burden",
+                "and not saying what needs to be said",
+                "and not voicing those thoughts hovering inside your mouth, because of the damage you know they'll do",
+                "and clinging to the memory of when things were different",
+                "and unknowable",
+                "and lost"
+			];
+
+			// This is a very common randomizing function.
+			// It takes a list (array) and returns one at random.
+			function select_random(x){
+				y = x[Math.floor(Math.random()*x.length)];
+				return y;
+			}
+
+			// This is the generator function
+			function generate(){
+
+				// Select a random item from each list
+				var selected_one = select_random(one);
+				var selected_two = select_random(two);
+				var selected_three = select_random(three);
+				var selected_four = select_random(four);
+
+				// Make a paragraph and then add the selected (random) item from each list list
+				$('body').append('<p>');
+				$('body').append('<div class="list-one">' + selected_one + '</div>');
+				$('body').append('<div class="list-two">' + selected_two + '</div>');
+				$('body').append('<div class="list-three">' + selected_three + '</div>');
+				$('body').append('<div class="list-four">' + selected_four + '</div>');
+				$('body').append('</p>');
+
+			}
+
+			// Run the generator every two seconds ("2000" in the code below)
+			function timeout() {
+			    setTimeout(function () {
+			        generate();
+			        timeout();
+			    }, 2000);
+			}
+
+			generate();
+
+			timeout();
+			
+		});
+
+	</script>
+	<!-- 
+	***** END JAVASCRIPT ***** 
+	-->
+
+</head>
+
+<body>
+
+	<!--
+	This is the visible portion.
+
+	If you want your words or phrases to go side-by-side, change...
+
+	<div></div>
+	to
+	<span></span>
+
+	in the code below.
+	-->
+
+</body>
+
+</html>
