@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>WHAT HAVE YOU DONE?</title>
+	
+	<!-- 
+	***** START CSS ***** 
+	-->
+	<style>
+
+		body {
+            background-image:url('https://media.giphy.com/media/boNzmsxVblJWo/giphy.gif');
+            color: #ffffff;
+			margin: 75px;
+            font-size: 50px;
+            text-align: left;
+			font-family: "Menlo", Courier, monospace;
+            padding-left: 10%;
+		}
+
+		.list-one {
+            text-align: right;
+            font-size: 70px;
+            padding-top: 3%;
+            text-transform: uppercase;
+		}
+
+		.list-two {
+		}
+        
+        .list-three {
+            
+        }
+
+	</style>
+	<!-- 
+	***** END CSS ***** 
+	-->
+
+
+	<!-- 
+	***** START JAVASCRIPT ***** 
+	-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+            
+            /* So I'd recommend adding more variables to var one and var four for sure, 
+            right now you'll get a lot of repetition even though it lookd like you have a lot of var one options 
+            that first variable is the one people hook into the most so repeats are way more noticeable 
+            - the same goes for endings */
+            
+            // list one content
+			var one = [
+				"you are hades, relegated to dominion over that which brings you to despair",
+                "you are persephone, eating the seeds and trapped",
+                "you are the hope that pandora held in her hands",
+                "you are an old god, powerful but forgotten",
+                "you are mortal",
+                "you are an eldritch horror, brought back into this mortal plane out of your own control but willing to wreak havoc on those responsible",
+                "you are calypso, fervent in your beliefs no matter how wild they are to others",
+                "your name was never created, but you exist in the space between moments",
+                "you relive your own existence through stories",
+                "you are legendary and nameless",
+                "you are medusa, villified and saved",
+                "you are zeus, what an asshole"
+			];
+
+			// list two content
+			var two = [
+				"your tale is known",
+                "your tale is filled with grief",
+                "your tale is unremarkable",
+                "your tale is predictable",
+                "your tale is spoken of only at a whisper, with darting eyes and shaking hands",
+                "your tale is well-loved",
+                "your tale is known but you are not",
+                "your tale is lost to time"
+			];
+
+			// list three content
+			var three = [
+				"",
+                ""
+			];
+
+			// list four content
+			var four = [
+				"and trying not to react",
+                "and not saying what needs to be said",
+                "and clinging to the memory of when things were different",
+                "and unknowable",
+                "and lost"
+			];
+
+			// This is a very common randomizing function.
+			// It takes a list (array) and returns one at random.
+			function select_random(x){
+				y = x[Math.floor(Math.random()*x.length)];
+				return y;
+			}
+
+			// This is the generator function
+			function generate(){
+
+				// Select a random item from each list
+				var selected_one = select_random(one);
+				var selected_two = select_random(two);
+				var selected_three = select_random(three);
+				var selected_four = select_random(four);
+
+				// Make a paragraph and then add the selected (random) item from each list list
+				$('body').append('<p>');
+				$('body').append('<div class="list-one">' + selected_one + '</div>');
+				$('body').append('<div class="list-two">' + selected_two + '</div>');
+				$('body').append('<div class="list-three">' + selected_three + '</div>');
+				$('body').append('<div class="list-four">' + selected_four + '</div>');
+				$('body').append('</p>');
+
+			}
+
+			// Run the generator every two seconds ("2000" in the code below)
+			function timeout() {
+			    setTimeout(function () {
+			        generate();
+			        timeout();
+			    }, 3000);
+			}
+
+			generate();
+
+			timeout();
+			
+		});
+
+	</script>
+	<!-- 
+	***** END JAVASCRIPT ***** 
+	-->
+
+</head>
+
+<body>
+
+	<!--
+	This is the visible portion.
+
+	If you want your words or phrases to go side-by-side, change...
+
+	<div></div>
+	to
+	<span></span>
+
+	in the code below.
+	-->
+
+</body>
+
+</html>
